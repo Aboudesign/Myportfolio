@@ -430,3 +430,330 @@ footer {
 footer p {
   text-align: center;
 }
+
+
+
+
+  #contact {
+    text-align: center;
+    padding: 4rem 1rem;
+  }
+ 
+  .section__text__p1 {
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #718096;
+    margin-bottom: 4px;
+  }
+ 
+  .title {
+    font-size: 32px;
+    font-weight: 600;
+    color: #1a202c;
+    margin-bottom: 2.5rem;
+  }
+ 
+  /* --- Formulaire email --- */
+  .cs-form-card {
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 1.75rem;
+    max-width: 560px;
+    margin: 0 auto 2.5rem;
+    text-align: left;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+  }
+ 
+  .cs-form-card h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a202c;
+    margin-bottom: 1.25rem;
+  }
+ 
+  .cs-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+ 
+  .cs-row.full {
+    grid-template-columns: 1fr;
+  }
+ 
+  .cs-field {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+ 
+  .cs-field label {
+    font-size: 12px;
+    font-weight: 500;
+    color: #4a5568;
+  }
+ 
+  .cs-field input,
+  .cs-field textarea {
+    background: #f7fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 10px 12px;
+    font-size: 14px;
+    color: #1a202c;
+    font-family: inherit;
+    outline: none;
+    resize: none;
+    transition: border-color 0.15s, box-shadow 0.15s;
+  }
+ 
+  .cs-field input:focus,
+  .cs-field textarea:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102,126,234,0.1);
+  }
+ 
+  .cs-field textarea {
+    min-height: 100px;
+  }
+ 
+  .cs-send-btn {
+    width: 100%;
+    margin-top: 6px;
+    background: #1a202c;
+    border: none;
+    border-radius: 10px;
+    padding: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-family: inherit;
+    transition: background 0.15s, transform 0.1s;
+  }
+ 
+  .cs-send-btn:hover { background: #2d3748; }
+  .cs-send-btn:active { transform: scale(0.98); }
+ 
+  .cs-send-btn svg {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+  }
+ 
+  .cs-error {
+    display: none;
+    font-size: 12px;
+    color: #e53e3e;
+    margin-top: 8px;
+  }
+ 
+  .cs-success {
+    display: none;
+    text-align: center;
+    padding: 1.5rem 0 0.5rem;
+  }
+ 
+  .cs-success svg {
+    width: 36px;
+    height: 36px;
+    margin: 0 auto 10px;
+    display: block;
+    stroke: #38a169;
+  }
+ 
+  .cs-success p {
+    font-size: 14px;
+    color: #38a169;
+    font-weight: 500;
+  }
+ 
+  /* --- Separateur --- */
+  .cs-divider {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    max-width: 560px;
+    margin: 0 auto 1.75rem;
+  }
+ 
+  .cs-divider-line {
+    flex: 1;
+    height: 1px;
+    background: #e2e8f0;
+  }
+ 
+  .cs-divider-label {
+    font-size: 11px;
+    color: #a0aec0;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+ 
+  /* --- Cartes sociales --- */
+  .cs-socials {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    max-width: 560px;
+    margin: 0 auto 2rem;
+  }
+ 
+  .cs-social-card {
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 0.85rem 1.4rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #1a202c;
+    font-size: 13px;
+    font-weight: 500;
+    transition: border-color 0.15s, background 0.15s, box-shadow 0.15s;
+    min-width: 140px;
+  }
+ 
+  .cs-social-card:hover {
+    border-color: #cbd5e0;
+    background: #f7fafc;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  }
+ 
+  .cs-social-card svg {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+  }
+ 
+  /* --- Editeur de liens --- */
+  .cs-editor {
+    background: #f7fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 1.25rem;
+    max-width: 560px;
+    margin: 0 auto;
+    text-align: left;
+  }
+ 
+  .cs-editor-title {
+    font-size: 11px;
+    color: #718096;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    font-weight: 500;
+  }
+ 
+  .cs-erow {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 8px;
+    align-items: center;
+  }
+ 
+  .cs-erow select,
+  .cs-erow input {
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 8px 10px;
+    font-size: 13px;
+    color: #2d3748;
+    font-family: inherit;
+    outline: none;
+    transition: border-color 0.15s;
+  }
+ 
+  .cs-erow select:focus,
+  .cs-erow input:focus {
+    border-color: #667eea;
+  }
+ 
+  .cs-erow select { cursor: pointer; }
+  .cs-erow input  { flex: 1; }
+ 
+  .cs-xbtn {
+    background: transparent;
+    border: none;
+    color: #a0aec0;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 2px 6px;
+    border-radius: 4px;
+    line-height: 1;
+    transition: color 0.15s, background 0.15s;
+  }
+ 
+  .cs-xbtn:hover {
+    color: #e53e3e;
+    background: #fff5f5;
+  }
+ 
+  .cs-addbtn {
+    width: 100%;
+    background: transparent;
+    border: 1px dashed #cbd5e0;
+    border-radius: 8px;
+    padding: 9px;
+    font-size: 13px;
+    color: #718096;
+    cursor: pointer;
+    margin-top: 4px;
+    font-family: inherit;
+    transition: all 0.15s;
+  }
+ 
+  .cs-addbtn:hover {
+    border-color: #667eea;
+    color: #667eea;
+    background: #ebf4ff;
+  }
+ 
+  @media (max-width: 480px) {
+    .cs-row { grid-template-columns: 1fr; }
+    .cs-erow { flex-wrap: wrap; }
+    .cs-erow select { width: 100%; }
+  }
+
+
+
+
+  .section__pic-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .about-pic {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10%;
+  }
+
+  
+  .section__pic-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .section__pic-container img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+

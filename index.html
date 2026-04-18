@@ -8,6 +8,18 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
   </head>
+
+
+
+
+
+
+
+
+
+
+
+
   <body>
     <nav id="desktop-nav">
       <div class="logo">My Portfolio</div>
@@ -41,20 +53,7 @@
   <img src="./assets/Abou.jpeg" alt="Aboubacar Ouattara profile picture" />
 </div>
 
-<style>
-  .section__pic-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
 
-  .section__pic-container img {
-    width: 400px;
-    height: 400px;
-    object-fit: cover;
-    border-radius: 50%;
-  }
-</style>
       <div class="section__text">
         <p class="section__text__p1">Hello, I'm</p>
         <h1 class="title">Aboubacar Ouattara</h1>
@@ -69,21 +68,7 @@
           <button class="btn btn-color-1" onclick="location.href='./#contact'">
             Contact Info
           </button>
-        </div>
-        <div id="socials-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="My LinkedIn profile"
-            class="icon"
-            onclick="location.href='https:'//www.linkedin.com/in/aboubacar-ouattara-ab93b6258?utm_source=share_via&utm_content=profile&utm_medium=member_ios'"
-          />
-          <img
-            src="./assets/github.png"
-            alt="My Github profile"
-            class="icon"
-            onclick="location.href='https://github.com/'"
-          />
-        </div>
+       
       </div>
     </section>
     <section id="about">
@@ -97,20 +82,7 @@
   </video>
 </div>
 
-<style>
-  .section__pic-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
 
-  .about-pic {
-    width: 400px;
-    height: 400px;
-    object-fit: cover;
-    border-radius: 10%;
-  }
-</style>
         <div class="about-details-container">
           <div class="about-containers">
             <div class="details-container">
@@ -183,7 +155,7 @@
               </article>
               <article>
                 <img
-                  src="./assets/checkmark.png"
+                  src="./assets/whatsapp.png"
                   alt="Experience icon"
                   class="icon"
                 />
@@ -210,7 +182,7 @@
                   class="icon"
                 />
                 <div>
-                  <h3>TypeScript</h3>
+                  <h3>Flutter</h3>
                   <p>Basic</p>
                 </div>
               </article>
@@ -371,27 +343,80 @@
         onclick="location.href='./#contact'"
       />
     </section>
+    
+
     <section id="contact">
-      <p class="section__text__p1">Get in Touch</p>
-      <h1 class="title">Contact Me</h1>
-      <div class="contact-info-upper-container">
-        <div class="contact-info-container">
-          <img
-            src="./assets/email.png"
-            alt="Email icon"
-            class="icon contact-icon email-icon"
-          />
-          <p><a href="mailto:examplemail@gmail.com">Example@gmail.com</a></p>
+  <p class="section__text__p1">Get in Touch</p>
+  <h1 class="title">Contact Me</h1>
+ 
+  <!-- Formulaire d'envoi d'email -->
+  <div class="cs-form-card">
+    <h3>Envoyer un message</h3>
+    <div id="cs-form-body">
+      <div class="cs-row">
+        <div class="cs-field">
+          <label>Nom *</label>
+          <input type="text" id="cf-name" placeholder="Votre nom">
         </div>
-        <div class="contact-info-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="LinkedIn icon"
-            class="icon contact-icon"
-          />
-          <p><a href="https://https://www.linkedin.com/in/aboubacar-ouattara-ab93b6258?utm_source=share_via&utm_content=profile&utm_medium=member_ios">LinkedIn</a></p>
+        <div class="cs-field">
+          <label>Email *</label>
+          <input type="email" id="cf-email" placeholder="vous@exemple.com">
         </div>
       </div>
+      <div class="cs-row full">
+        <div class="cs-field">
+          <label>Sujet</label>
+          <input type="text" id="cf-subject" placeholder="Objet du message">
+        </div>
+      </div>
+      <div class="cs-row full">
+        <div class="cs-field">
+          <label>Message *</label>
+          <textarea id="cf-msg" placeholder="Votre message..."></textarea>
+        </div>
+      </div>
+      <button class="cs-send-btn" onclick="csSend()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="22" y1="2" x2="11" y2="13"/>
+          <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+        </svg>
+        Envoyer le message
+      </button>
+      <p class="cs-error" id="cs-err"></p>
+    </div>
+    <div class="cs-success" id="cs-success">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+        <polyline points="22 4 12 14.01 9 11.01"/>
+      </svg>
+      <p>Message envoye ! Je vous repondrai des que possible.</p>
+    </div>
+  </div>
+ 
+  <!-- Separateur -->
+  <div class="cs-divider">
+    <div class="cs-divider-line"></div>
+    <span class="cs-divider-label">Retrouvez-moi sur</span>
+    <div class="cs-divider-line"></div>
+  </div>
+
+
+
+
+        
+ 
+  <!-- Cartes sociales dynamiques -->
+  <div class="cs-socials" id="cs-socials"></div>
+ 
+  <!-- Editeur de liens -->
+  <!-- <div class="cs-editor">
+    <p class="cs-editor-title">Gerer mes liens sociaux</p>
+    <div id="cs-elist"></div>
+    <button class="cs-addbtn" onclick="csAdd()">+ Ajouter un reseau</button>
+  </div> -->
+</section>
+
+        
     </section>
     <footer>
       <nav>

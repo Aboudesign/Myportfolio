@@ -14,7 +14,8 @@ function toggleMenu() {
 
 const TARGET_EMAIL = "aboudesign01155@gmail.com";
 const WHATSAPP_NUMBER = "22604475650";
-const WHATSAPP_URL = "https://wa.me/" + WHATSAPP_NUMBER;
+const WHATSAPP_URL =
+  "https://api.whatsapp.com/send?phone=" + encodeURIComponent("+" + WHATSAPP_NUMBER);
 
 const links = [
   { id: 1, net: "whatsapp", url: WHATSAPP_URL },
@@ -113,6 +114,12 @@ function renderSocials() {
       })
       .join("");
   }
+}
+
+function renderContactLinks() {
+  document.querySelectorAll("[data-whatsapp-link]").forEach(function (el) {
+    el.href = WHATSAPP_URL;
+  });
 }
 
 function csSend() {
@@ -507,6 +514,7 @@ function initHeaderScroll() {
 
 document.addEventListener("DOMContentLoaded", function () {
   renderSocials();
+  renderContactLinks();
   renderSkills();
   renderSkillTags();
   renderProjectsShowcase();

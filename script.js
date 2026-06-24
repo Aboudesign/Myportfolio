@@ -13,7 +13,7 @@ function toggleMenu() {
 }
 
 const TARGET_EMAIL = "aboudesign01155@gmail.com";
-const WHATSAPP_NUMBER = "2264475650";
+const WHATSAPP_NUMBER = "22604475650";
 const WHATSAPP_URL = "https://wa.me/" + WHATSAPP_NUMBER;
 
 const links = [

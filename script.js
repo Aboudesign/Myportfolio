@@ -13,9 +13,12 @@ function toggleMenu() {
 }
 
 const TARGET_EMAIL = "aboudesign01155@gmail.com";
-const WHATSAPP_NUMBER = "22604475650";
+// +226 04 47 56 50 → indicatif 226 + 8 chiffres (04475650)
+const WHATSAPP_COUNTRY_CODE = "226";
+const WHATSAPP_LOCAL_NUMBER = "04475650";
+const WHATSAPP_NUMBER = WHATSAPP_COUNTRY_CODE + WHATSAPP_LOCAL_NUMBER;
 const WHATSAPP_URL =
-  "https://api.whatsapp.com/send?phone=" + encodeURIComponent("+" + WHATSAPP_NUMBER);
+  "https://api.whatsapp.com/send?phone=" + WHATSAPP_NUMBER;
 
 const links = [
   { id: 1, net: "whatsapp", url: WHATSAPP_URL },

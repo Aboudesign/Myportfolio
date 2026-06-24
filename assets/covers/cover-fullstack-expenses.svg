@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" role="img" aria-label="Fullstack Expenses">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#064e3b"/>
+      <stop offset="100%" stop-color="#10b981"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="480" fill="url(#bg2)"/>
+  <rect x="140" y="260" width="60" height="120" rx="6" fill="#ffffff" opacity="0.85"/>
+  <rect x="240" y="200" width="60" height="180" rx="6" fill="#ffffff" opacity="0.7"/>
+  <rect x="340" y="160" width="60" height="220" rx="6" fill="#ffffff" opacity="0.9"/>
+  <rect x="440" y="220" width="60" height="160" rx="6" fill="#ffffff" opacity="0.65"/>
+  <rect x="540" y="180" width="60" height="200" rx="6" fill="#ffffff" opacity="0.8"/>
+  <text x="400" y="110" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="32" font-weight="700">Fullstack Expenses</text>
+  <text x="400" y="145" text-anchor="middle" fill="#d1fae5" font-family="Arial, sans-serif" font-size="15">Suivi des depenses et statistiques</text>
+</svg>

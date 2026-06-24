@@ -1,436 +1,350 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
+    <meta
+      name="description"
+      content="Portfolio d'Aboubacar Ouattara — Développeur web, mobile & perspective DevOps (Python, Django, React)."
+    />
+    <title>Aboubacar Ouattara — Portfolio</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
   </head>
-
-
-
-
-
-
-
-
-
-
-
-
   <body>
-    <nav id="desktop-nav">
-      <div class="logo">My Portfolio</div>
-      <div>
+    <a class="skip-link" href="#profile">Aller au contenu</a>
+
+    <header class="site-header" id="site-header">
+      <nav id="desktop-nav" aria-label="Navigation principale">
+        <a href="#profile" class="logo">
+          <span class="logo__mark" aria-hidden="true">AO</span>
+          <span class="logo__text">
+            <span class="logo__name">Aboubacar Ouattara</span>
+            <span class="logo__tag">Portfolio</span>
+          </span>
+        </a>
         <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#about" class="nav-link">À propos</a></li>
+          <li><a href="#experience" class="nav-link">Compétences</a></li>
+          <li><a href="#projects" class="nav-link">Projets</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
-      </div>
-    </nav>
-    <nav id="hamburger-nav">
-      <div class="logo">Aboubacar Ouattara</div>
-      <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <div class="menu-links">
-          <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-        </div>
-      </div>
-    </nav>
-    <section id="profile">
-      <div class="section__pic-container">
-  <img src="./assets/Abou.jpeg" alt="Aboubacar Ouattara profile picture" />
-</div>
-
-
-      <div class="section__text">
-        <p class="section__text__p1">Hello, I'm</p>
-        <h1 class="title">Aboubacar Ouattara</h1>
-        <p class="section__text__p2">Software Engineer</p>
-        <div class="btn-container">
+        <a href="#contact" class="btn btn--header">Me contacter</a>
+      </nav>
+      <nav id="hamburger-nav" aria-label="Navigation mobile">
+        <a href="#profile" class="logo logo--compact">
+          <span class="logo__mark" aria-hidden="true">AO</span>
+          <span class="logo__name">Aboubacar Ouattara</span>
+        </a>
+        <div class="hamburger-menu">
           <button
-            class="btn btn-color-2"
-            onclick="window.open('./assets/CV_OUATTARA_ABOUBACAR.docx')"
+            class="hamburger-icon"
+            type="button"
+            aria-label="Ouvrir le menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+            onclick="toggleMenu()"
           >
-            Download CV
+            <span></span>
+            <span></span>
+            <span></span>
           </button>
-          <button class="btn btn-color-1" onclick="location.href='./#contact'">
-            Contact Info
-          </button>
-       
-      </div>
-    </section>
-    <section id="about">
-      <p class="section__text__p1">Get To Know More</p>
-      <h1 class="title">About Me</h1>
-      <div class="section-container">
-       <div class="section__pic-container">
-  <video class="about-pic" controls autoplay muted loop>
-    <source src="./assets/MEINTRO.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-</div>
-
-
-        <div class="about-details-container">
-          <div class="about-containers">
-            <div class="details-container">
-              <img
-                src="./assets/experience.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <h3>Experience</h3>
-              <p>1+ years <br />Web / Mobile Development</p>
-            </div>
-            <div class="details-container">
-              <img
-                src="./assets/education.png"
-                alt="Education icon"
-                class="icon"
-              />
-              <h3>Education</h3>
-              <p>B.Sc. Bachelors Degree</p>
-            </div>
-          </div>
-          <div class="text-container">
-            <p>
-             My name is Aboubacar Ouattara, a software engineering student passionate about web/mobile development and artificial intelligence.
-             I build efficient and scalable web/mobile applications using Laravel, Python and React.js.
-             I enjoy solving real-world problems through practical and innovative solutions.
-             I continuously improve my skills by working on real projects.
-             I am particularly interested in AI-driven and data-driven systems.
-            I am seeking opportunities to grow, collaborate, and gain professional experience
-            </p>
-          </div>
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#experience'"
-      />
-    </section>
-    <section id="experience">
-      <p class="section__text__p1">Explore My</p>
-      <h1 class="title">Experience</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container">
-            <h2 class="experience-sub-title">Frontend Development</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>HTML</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>CSS</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/whatsapp.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>React js</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>JavaScript</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Flutter</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Material UI</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-            </div>
-          </div>
-          <div class="details-container">
-            <h2 class="experience-sub-title">Backend Development</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>MSQL</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Django</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Laravel</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Git</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-            </div>
-          </div>
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#projects'"
-      />
-    </section>
-    <section id="projects">
-      <p class="section__text__p1">Browse My Recent</p>
-      <h1 class="title">Projects</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-1.png"
-                alt="Project 1"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Project One</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-2.png"
-                alt="Project 2"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Project Two</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-3.png"
-                alt="Project 3"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Project Three</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#contact'"
-      />
-    </section>
-    
-
-    <section id="contact">
-  <p class="section__text__p1">Get in Touch</p>
-  <h1 class="title">Contact Me</h1>
- 
-  <!-- Formulaire d'envoi d'email -->
-  <div class="cs-form-card">
-    <h3>Envoyer un message</h3>
-    <div id="cs-form-body">
-      <div class="cs-row">
-        <div class="cs-field">
-          <label>Nom *</label>
-          <input type="text" id="cf-name" placeholder="Votre nom">
-        </div>
-        <div class="cs-field">
-          <label>Email *</label>
-          <input type="email" id="cf-email" placeholder="vous@exemple.com">
-        </div>
-      </div>
-      <div class="cs-row full">
-        <div class="cs-field">
-          <label>Sujet</label>
-          <input type="text" id="cf-subject" placeholder="Objet du message">
-        </div>
-      </div>
-      <div class="cs-row full">
-        <div class="cs-field">
-          <label>Message *</label>
-          <textarea id="cf-msg" placeholder="Votre message..."></textarea>
-        </div>
-      </div>
-      <button class="cs-send-btn" onclick="csSend()">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <line x1="22" y1="2" x2="11" y2="13"/>
-          <polygon points="22 2 15 22 11 13 2 9 22 2"/>
-        </svg>
-        Envoyer le message
-      </button>
-      <p class="cs-error" id="cs-err"></p>
-    </div>
-    <div class="cs-success" id="cs-success">
-      <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
-        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
-        <polyline points="22 4 12 14.01 9 11.01"/>
-      </svg>
-      <p>Message envoye ! Je vous repondrai des que possible.</p>
-    </div>
-  </div>
- 
-  <!-- Separateur -->
-  <div class="cs-divider">
-    <div class="cs-divider-line"></div>
-    <span class="cs-divider-label">Retrouvez-moi sur</span>
-    <div class="cs-divider-line"></div>
-  </div>
-
-
-
-
-        
- 
-  <!-- Cartes sociales dynamiques -->
-  <div class="cs-socials" id="cs-socials"></div>
- 
-  <!-- Editeur de liens -->
-  <!-- <div class="cs-editor">
-    <p class="cs-editor-title">Gerer mes liens sociaux</p>
-    <div id="cs-elist"></div>
-    <button class="cs-addbtn" onclick="csAdd()">+ Ajouter un reseau</button>
-  </div> -->
-</section>
-
-        
-    </section>
-    <footer>
-      <nav>
-        <div class="nav-links-container">
-          <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
+          <div class="menu-backdrop" id="menu-backdrop" onclick="toggleMenu()" hidden></div>
+          <ul class="menu-links" id="mobile-menu">
+            <li><a href="#about" class="nav-link" onclick="toggleMenu()">À propos</a></li>
+            <li><a href="#experience" class="nav-link" onclick="toggleMenu()">Compétences</a></li>
+            <li><a href="#projects" class="nav-link" onclick="toggleMenu()">Projets</a></li>
+            <li><a href="#contact" class="nav-link" onclick="toggleMenu()">Contact</a></li>
+            <li class="menu-links__cta">
+              <a href="#contact" class="btn btn--header btn--menu" onclick="toggleMenu()">Me contacter</a>
+            </li>
           </ul>
         </div>
       </nav>
-      <p>Copyright &#169; 2026 Aboubacar Ouattara . All Rights Reserved.</p>
+    </header>
+
+    <main>
+      <section id="profile" class="reveal">
+        <div class="profile-photo-wrap">
+          <div class="profile-photo__backdrop" aria-hidden="true"></div>
+          <div class="profile-photo__accent" aria-hidden="true"></div>
+          <div class="profile-photo__dots" aria-hidden="true"></div>
+          <figure class="profile-photo">
+            <img
+              src="./assets/abou.jpeg"
+              alt="Photo de profil d'Aboubacar Ouattara"
+              width="340"
+              height="420"
+              loading="eager"
+              decoding="async"
+            />
+            <figcaption class="profile-photo__caption">Aboubacar Ouattara</figcaption>
+          </figure>
+        </div>
+        <div class="section__text">
+          <p class="section__text__p1">Bonjour, je suis</p>
+          <h1 class="title">Aboubacar Ouattara</h1>
+          <p class="section__text__p2">
+            <span id="typed-role">Software Engineer</span>
+          </p>
+          <p class="hero-tagline">
+            Développement web & mobile — perspective DevOps
+          </p>
+          <div class="btn-container">
+            <button
+              class="btn btn-color-2"
+              type="button"
+              onclick="window.open('./assets/CV_OUATTARA_ABOUBACAR.docx')"
+            >
+              Télécharger CV
+            </button>
+            <button
+              class="btn btn-color-1"
+              type="button"
+              onclick="location.href='./#contact'"
+            >
+              Me contacter
+            </button>
+          </div>
+          <div id="socials-container" class="hero-socials"></div>
+        </div>
+      </section>
+
+      <section id="about" class="reveal">
+        <p class="section__text__p1">En savoir plus</p>
+        <h2 class="title">À propos de moi</h2>
+
+        <div class="section-container about-layout">
+          <div class="about-media">
+            <div class="about-terminal" aria-hidden="true">
+              <div class="about-terminal__bar">
+                <span></span><span></span><span></span>
+              </div>
+              <pre class="about-terminal__body"><code><span class="t-dim">$</span> whoami
+Aboubacar Ouattara
+
+<span class="t-dim">$</span> role
+Dev Web · Mobile
+
+<span class="t-dim">$</span> stack
+Python
+
+<span class="t-dim">$</span> perspective
+DevOps
+
+<span class="t-dim">$</span> status
+<span class="t-ok">●</span> Disponible</code></pre>
+            </div>
+          </div>
+
+          <div class="about-content">
+            <div class="about-containers">
+              <div class="details-container">
+                <span class="about-card-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="2" y="7" width="20" height="14" rx="2" />
+                    <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" />
+                  </svg>
+                </span>
+                <h3>Expérience</h3>
+                <p>1+ an<br />Web, Mobile & DevOps</p>
+              </div>
+              <div class="details-container">
+                <span class="about-card-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                    <path d="M6 12v5c3 3 9 3 12 0v-5" />
+                  </svg>
+                </span>
+                <h3>Formation</h3>
+                <p>Licence<br />Génie logiciel</p>
+              </div>
+            </div>
+
+            <div class="text-container">
+              <p>
+                Diplômé en génie logiciel, je développe des applications web et mobile
+                avec Python, en visant des pratiques DevOps : déploiement, automatisation
+                et fiabilité.
+              </p>
+              <p>
+                J'aime créer des solutions simples et efficaces. Ouvert aux
+                collaborations et nouveaux projets.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <button
+          type="button"
+          class="icon arrow"
+          aria-label="Aller aux compétences"
+          onclick="location.href='./#experience'"
+        >
+          <img src="./assets/arrow.png" alt="" aria-hidden="true" />
+        </button>
+      </section>
+
+      <section id="experience" class="reveal">
+        <p class="section__text__p1">Découvrir mes</p>
+        <h2 class="title">Compétences</h2>
+
+        <div class="skills-grid" id="skills-grid"></div>
+
+        <div class="skills-tags">
+          
+          <div class="skills-tags__list" id="skills-tags-list"></div>
+        </div>
+        <button
+          type="button"
+          class="icon arrow"
+          aria-label="Aller aux projets"
+          onclick="location.href='./#projects'"
+        >
+          <img src="./assets/arrow.png" alt="" aria-hidden="true" />
+        </button>
+      </section>
+
+      <section id="projects" class="reveal">
+        <p class="section__text__p1">Découvrir mes</p>
+        <h2 class="title">Projets</h2>
+        <p class="projects-intro">
+          Projets réalisés ensemble — e-commerce ASAP Online, plateforme LMS et app de gestion des dépenses.
+        </p>
+        <div id="projects-showcase" class="projects-showcase"></div>
+        <a
+          class="projects-github-banner"
+          href="https://github.com/Aboudesign"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="#ffffff" d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
+          </svg>
+          <span>Voir tous mes projets sur <strong>@Aboudesign</strong></span>
+          <svg class="projects-github-banner__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M7 17 17 7"/><path d="M7 7h10v10"/>
+          </svg>
+        </a>
+        <button
+          type="button"
+          class="icon arrow"
+          aria-label="Aller au contact"
+          onclick="location.href='./#contact'"
+        >
+          <img src="./assets/arrow.png" alt="" aria-hidden="true" />
+        </button>
+      </section>
+
+      <section id="contact" class="reveal">
+        <p class="section__text__p1">Restons en contact</p>
+        <h2 class="title">Me contacter</h2>
+
+        <div class="cs-form-card">
+          <h3>Envoyer un message</h3>
+          <div id="cs-form-body">
+            <div class="cs-row">
+              <div class="cs-field">
+                <label for="cf-name">Nom *</label>
+                <input type="text" id="cf-name" placeholder="Votre nom" required />
+              </div>
+              <div class="cs-field">
+                <label for="cf-email">Email *</label>
+                <input type="email" id="cf-email" placeholder="vous@exemple.com" required />
+              </div>
+            </div>
+            <div class="cs-row full">
+              <div class="cs-field">
+                <label for="cf-subject">Sujet</label>
+                <input type="text" id="cf-subject" placeholder="Objet du message" />
+              </div>
+            </div>
+            <div class="cs-row full">
+              <div class="cs-field">
+                <label for="cf-msg">Message *</label>
+                <textarea id="cf-msg" placeholder="Votre message..." required></textarea>
+              </div>
+            </div>
+            <button class="cs-send-btn" type="button" onclick="csSend()">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <line x1="22" y1="2" x2="11" y2="13" />
+                <polygon points="22 2 15 22 11 13 2 9 22 2" />
+              </svg>
+              Envoyer le message
+            </button>
+            <p class="cs-error" id="cs-err" role="alert"></p>
+          </div>
+          <div class="cs-success" id="cs-success" hidden>
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" aria-hidden="true">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+              <polyline points="22 4 12 14.01 9 11.01" />
+            </svg>
+            <p>Message envoyé ! Je vous répondrai dès que possible.</p>
+          </div>
+        </div>
+
+        <div class="cs-divider">
+          <div class="cs-divider-line"></div>
+          <span class="cs-divider-label">Retrouvez-moi sur</span>
+          <div class="cs-divider-line"></div>
+        </div>
+
+        <div class="cs-socials" id="cs-socials"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <a href="#profile" class="logo logo--footer">
+            <span class="logo__mark" aria-hidden="true">AO</span>
+            <span class="logo__text">
+              <span class="logo__name">Aboubacar Ouattara</span>
+              <span class="logo__tag">Dev Web · Mobile · DevOps</span>
+            </span>
+          </a>
+          <p class="footer__bio">
+            Développeur web & mobile, perspective DevOps.
+          </p>
+        </div>
+
+        <div class="footer__col">
+          <h3 class="footer__heading">Navigation</h3>
+          <ul class="footer__links">
+            <li><a href="#about" class="nav-link">À propos</a></li>
+            <li><a href="#experience" class="nav-link">Compétences</a></li>
+            <li><a href="#projects" class="nav-link">Projets</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h3 class="footer__heading">Contact</h3>
+          <ul class="footer__links footer__links--contact">
+            <li>
+              <a href="mailto:aboudesign01155@gmail.com">aboudesign01155@gmail.com</a>
+            </li>
+            <li>
+              <a href="https://wa.me/2264475650" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+            </li>
+            <li>
+              <a href="https://github.com/Aboudesign" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h3 class="footer__heading">Réseaux</h3>
+          <div class="footer__socials" id="footer-socials"></div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copy">Copyright &#169; 2026 Aboubacar Ouattara. Tous droits réservés.</p>
+        <a href="#profile" class="footer__top-link">Retour en haut</a>
+      </div>
     </footer>
+
     <script src="script.js"></script>
   </body>
 </html>
